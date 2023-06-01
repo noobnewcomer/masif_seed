@@ -42,7 +42,7 @@ we strongly recommend you use the Dockerfile and Docker container.
 git clone https://github.com/LPDI-EPFL/masif_seed.git
 cd masif_seed
 docker build . -t masif_seed --network host            ## For Packages Downloading
-docker run -it -v $PWD:$PWD masif_seed
+docker run -it -v $PWD:$PWD masif_seed --network host
 ```
 
 ## Step-by-step example
