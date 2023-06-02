@@ -4,6 +4,8 @@
 # So we write 'python' for the image name and 'latest' for the version.
 FROM pymesh/pymesh
 
+RUN sed -i 's/deb.debian.org/mirrors.163.com/g' /etc/apt/sources.list
+RUN sed -i 's/security.debian.org/mirrors.163.com/g' /etc/apt/sources.list
 # In order to launch our python code, we must import it into our image.
 # We use the keyword 'COPY' to do that.
 # The first parameter 'main.py' is the name of the file on the host.
@@ -19,6 +21,7 @@ RUN apt-get update && \
 # DOWNLOAD/INSTALL APBS
 RUN mkdir /install
 WORKDIR /install
+#RUN git clone https://github.com/Electrostatics/apbs-pdb2pqr
 RUN git clone https://github.com/Electrostatics/apbs-pdb2pqr
 WORKDIR /install/apbs-pdb2pqr
 RUN ls
@@ -46,6 +49,7 @@ ENV PDB2PQR_BIN /root/pdb2pqr/pdb2pqr.py
 
 # DOWNLOAD reduce (for protonation)
 WORKDIR /install
+#RUN git clone https://github.com/rlabduke/reduce.git
 RUN git clone https://github.com/rlabduke/reduce.git
 WORKDIR /install/reduce
 RUN make install
