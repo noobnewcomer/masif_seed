@@ -11,7 +11,7 @@ echo ${SLURM_ARRAY_TASK_ID}
 echo FINISHED at `date`
 
 PDBID_CHAIN=$1
-masif_seed_search_root=$(git rev-parse --show-toplevel)
+masif_seed_search_root=$(git rev-parse --show-toplevel)/masif_seed_search
 masif_seed_search_scripts=$masif_seed_search_root/scripts
 export PYTHONPATH=$PYTHONPATH:$masif_seed_search_scripts:`pwd`
 echo $masif_seed_search_scripts
