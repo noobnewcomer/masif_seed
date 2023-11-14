@@ -24,7 +24,8 @@ in_fields = sys.argv[1].split('_')
 pdb_id = in_fields[0]
 
 # Download pdb 
-pdbl = PDBList(server='http://ftp.wwpdb.org')
+#pdbl = PDBList(server='http://ftp.wwpdb.org')
+pdbl = PDBList(server='http://files.wwpdb.org')
 pdb_filename = pdbl.retrieve_pdb_file(pdb_id, pdir=masif_opts['tmp_dir'],file_format='pdb')
 
 ##### Protonate with reduce, if hydrogens included.
