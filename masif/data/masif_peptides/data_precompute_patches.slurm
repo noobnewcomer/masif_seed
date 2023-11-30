@@ -5,7 +5,7 @@
 #SBATCH --cpus-per-task 1
 #SBATCH --mem 16384
 #SBATCH --time 03:00:00
-#SBATCH --array=2-1000
+#SBATCH --array=1-1000
 #SBATCH --output=exelogs/_masif_precompute.%A_%a.out
 #SBATCH --error=exelogs/_masif_precompute.%A_%a.err
 
