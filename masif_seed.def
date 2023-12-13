@@ -44,6 +44,6 @@ From: pymesh/pymesh
 	make install
 
 	pip3 install matplotlib
-	pip3 install ipython Biopython scikit-learn tensorflow==1.12 networkx open3d==0.8.0.0 dask==1.2.2 packaging
+	pip3 install ipython Biopython scikit-learn tensorflow_gpu==1.12 networkx open3d==0.8.0.0 dask==1.2.2 packaging
 
 	cd /
