@@ -6,5 +6,5 @@
 #SBATCH --mem 16384
 #SBATCH --array=100-353
 
-#./predict_site.sh -l in/x${SLURM_ARRAY_TASK_ID} 
+./predict_site.sh -l in/x${SLURM_ARRAY_TASK_ID} 
 ./compute_descriptors.sh -l in/x${SLURM_ARRAY_TASK_ID}
